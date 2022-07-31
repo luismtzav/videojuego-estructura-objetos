@@ -1,0 +1,71 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.game-container {
+  position: absolute;
+
+}
+
+.sky {
+  background-image: url("../img/fb-game-background.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+
+.bird {
+  background-image: url("../img/flappy-bird.png");
+  background-size:cover;
+  position: absolute;
+}
+
+.obstacle {
+  background-image: url("../img/flappybird-pipe.png");
+  background-size: cover;
+  position: absolute;
+}
+
+.topObstacle {
+  background-image: url("../img/flappybird-pipe.png");
+  background-size: cover;
+  transform: rotate(180deg);
+  position: absolute;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 1000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+@-webkit-keyframes slideright {
+  from {
+    background-position: 1000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.ground-container {
+  position: absolute;
+}
+
+.ground-moving {
+  position: absolute;
+  top: 598px;
+  height: 150px;
+  background-image: url("../img/bottom-background.png");
+  background-repeat: repeat-x;
+  animation: slideright 100s infinite linear;
+  -webkit-animation: slideright 100s infinite linear;
+  width: 100%;
+  z-index: +1;
+}
